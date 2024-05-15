@@ -12128,13 +12128,13 @@ a:focus {
 }
 
 .bg-login-image {
-    background: url(https://source.unsplash.com/K4mSJ7kc0As/600x800);
+    background: url('https://scontent.flim38-1.fna.fbcdn.net/v/t39.30808-6/278825609_144449091432301_7135848375992682336_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHeX6tbYmStFtm2m5ftAL_XRAuKC60yoU5EC4oLrTKhThtGVRVmKJLeyc-vVtYFvIU3DHAwITwNGrk0pyNpb3A0&_nc_ohc=vVzKKiS7wKAQ7kNvgF48Vz-&_nc_ht=scontent.flim38-1.fna&oh=00_AYBjTQ-Rqid8-D04xc_ji3TOqPFqzQ_WzfarHLxK9z6Y3Q&oe=664AEF99');
     background-position: center;
     background-size: cover
 }
 
 .bg-register-image {
-    background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+    background: url("https://cloudfront-us-east-1.images.arcpublishing.com/bloomberglinea/C4YHKV6MYNFEPIKAZVFO7OUZTU.jpg");
     background-position: center;
     background-size: cover
 }

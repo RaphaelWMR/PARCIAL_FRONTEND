@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    endpoint: 'https://citas-web-service.onrender.com/',
+    endpoint: 'https://parcial-backend-gd0a.onrender.com',
     dataAlumnoService: 'http://localhost:5000/'
 };

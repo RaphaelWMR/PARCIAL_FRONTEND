@@ -91,7 +91,7 @@ export class LoginComponent {
   async getAlumnoID(username: string): Promise<number> {
     try {
       const data = await this._AlumnoService.getAlumnoByUsername(username).toPromise(); // Espera la respuesta del servicio
-      return data?.alumno_id ?? 0; // Devuelve alumno_id si está disponible, de lo contrario, devuelve 0
+      return  0; // Devuelve alumno_id si está disponible, de lo contrario, devuelve 0
     } catch (error) {
       console.error(`Error al obtener el ID del alumno para el usuario ${username}`, error);
       return 0; // En caso de error, devuelve 0 o maneja el error de manera adecuada según tu lógica

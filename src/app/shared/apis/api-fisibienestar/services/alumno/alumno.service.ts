@@ -14,7 +14,7 @@ export class AlumnoService {
 
   constructor(private http: HttpClient) {
     this.myAppUrl = environment.endpoint;
-    this.myApiUrl = 'api/alumnos/';
+    this.myApiUrl = 'api/autos/';
   }
 
   getListAlumnos(): Observable<Alumno[]> {

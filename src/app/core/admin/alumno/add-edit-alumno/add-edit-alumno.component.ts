@@ -48,21 +48,19 @@ export class AddEditAlumnoComponent {
 
   addAlumno() {
     const alumno: Alumno = {
-      alumno_primerApellido: this.form.value.alumno_primerApellido,
-      alumno_segundoApellido: this.form.value.alumno_segundoApellido,
-      alumno_nombres: this.form.value.alumno_nombres,
-      alumno_dni: this.form.value.alumno_dni,
-      alumno_codigo: this.form.value.alumno_codigo,
-      alumno_telefono: this.form.value.alumno_telefono,
-      alumno_correoElectronico: this.form.value.alumno_correoElectronico,
-      estado_id: 0,
-      alumno_fechaNacimiento: new Date(this.form.value.alumno_fechaNacimiento),
-      eap_id: 0
+      marca: this.form.value.alumno_primerApellido,
+      modelo: this.form.value.alumno_segundoApellido,
+      estado: this.form.value.alumno_nombres,
+      anio: this.form.value.alumno_dni,
+      vendedor_id: this.form.value.alumno_codigo,
+      observaciones: this.form.value.alumno_telefono,
+      precio: this.form.value.alumno_correoElectronico,
+    
     }
 
     if (this.id !== 0) {
       //editar
-      alumno.alumno_id = this.id;
+      alumno.id = this.id;
       this._alumnoService.updateAlumno(this.id, alumno).subscribe(() => {
         console.log('Alumno actualizado');
         this.router.navigate(['/alumnos']);
@@ -80,16 +78,13 @@ export class AddEditAlumnoComponent {
     this._alumnoService.getAlumno(id).subscribe((data: Alumno) => {
       console.log(data);
       this.form.setValue({
-        alumno_primerApellido: data.alumno_primerApellido,
-        alumno_segundoApellido: data.alumno_segundoApellido,
-        alumno_nombres: data.alumno_nombres,
-        alumno_dni: data.alumno_dni,
-        alumno_codigo: data.alumno_codigo,
-        alumno_telefono: data.alumno_telefono,
-        alumno_correoElectronico: data.alumno_correoElectronico,
-        estado_id: data.estado_id,
-        alumno_fechaNacimiento: data.alumno_fechaNacimiento,
-        eap_id: data.eap_id
+        marca: data.marca,
+        modelo: data.modelo,
+        estado: data.estado,
+        anio: data.anio,
+        vendedor_id: data.vendedor_id,
+        observaciones: data.observaciones,
+        precio: data.precio,
       })
     })
   }
@@ -98,13 +93,13 @@ export class AddEditAlumnoComponent {
     this._getDataAlumnoService.getDataAlumno(this.form.value.alumno_codigo ?? 0).subscribe((data: AlumnoWS) => {
       console.log("Data: ", data);
       this.form.setValue({
-        alumno_primerApellido: data.alumno_primerApellido,
-        alumno_segundoApellido: data.alumno_segundoApellido,
-        alumno_nombres: data.alumno_nombres,
-        alumno_dni: data.alumno_dni,
-        alumno_codigo: data.alumno_codigo,
-        alumno_telefono: null,
-        alumno_correoElectronico: data.alumno_correoElectronico,
+        marca: data.alumno_primerApellido,
+        modelo: data.alumno_segundoApellido,
+        estado: data.alumno_nombres,
+        anio: data.alumno_dni,
+        vendedor_id: data.alumno_codigo,
+        observaciones: null,
+        precio: data.alumno_correoElectronico,
       })
     })
   }

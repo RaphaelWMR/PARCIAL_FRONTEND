@@ -10,39 +10,26 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">{{operacion}} Alumno</h1>
+                            <h1 class="h4 text-gray-900 mb-4">{{operacion}} Auto</h1>
                         </div>
                         <form class="user" [formGroup]="form" (ngSubmit)="addAlumno()">
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input formControlName="alumno_codigo" type="text"
-                                        class="form-control form-control-user" id="exampleFirstName"
-                                        placeholder="Código de estudiante">
-                                </div>
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <button type="button" (click)="getDataAlumno()"
-                                        class="btn btn-primary btn-user btn-block">
-                                        Buscar
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input formControlName="alumno_primerApellido" type="text"
                                         class="form-control form-control-user" id="exampleFirstName"
-                                        placeholder="Primer Apellido">
+                                        placeholder="Marca">
                                 </div>
                                 <div class="col-sm-6">
                                     <input formControlName="alumno_segundoApellido" type="text"
                                         class="form-control form-control-user" id="exampleLastName"
-                                        placeholder="Segundo Apellido">
+                                        placeholder="Modelo">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input formControlName="alumno_nombres" type="text"
                                         class="form-control form-control-user" id="exampleFirstName"
-                                        placeholder="Nombres">
+                                        placeholder="Estado">
                                 </div>
                                 <div class="col-sm-6">
                                     <input formControlName="alumno_dni" type="text"
@@ -53,13 +40,13 @@
                                 <div class="col-sm-6">
                                     <input formControlName="alumno_telefono" type="text"
                                         class="form-control form-control-user" id="exampleLastName"
-                                        placeholder="Teléfono">
+                                        placeholder="Precio">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input formControlName="alumno_correoElectronico" type="email"
                                     class="form-control form-control-user" id="exampleInputEmail"
-                                    placeholder="Correo institucional">
+                                    placeholder="Observaciones">
                             </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Registrar

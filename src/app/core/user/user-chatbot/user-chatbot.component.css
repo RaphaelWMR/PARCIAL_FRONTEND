@@ -1,0 +1,121 @@
+.chat {
+    border: 1px solid #3b62d1;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 400px;
+    /* Ajusta la altura del contenedor del chat según sea necesario */
+    overflow-y: auto;
+    /* Añade un desplazamiento vertical si el contenido es demasiado largo */
+}
+
+.msg_card_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.msg_container {
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.my_message {
+    align-self: flex-end;
+    background-color: #dcedff;
+    max-width: 70%;
+    /* Ancho máximo del globo de texto para mensajes del usuario */
+}
+
+.bot_message {
+    align-self: flex-start;
+    background-color: #ececec;
+    max-width: 70%;
+    /* Ancho máximo del globo de texto para mensajes del chatbot */
+}
+
+.card-footer {
+    display: flex;
+}
+
+.input-group {
+    flex: 1;
+}
+
+.send_btn {
+    background-color: #3b62d1;
+    color: #fff;
+}
+
+.type_msg {
+    background-color: #ececec;
+}
+
+.type_msg:focus {
+    border-color: #3b62d1;
+}
+
+.user_img {
+    border: none;
+    /* Remove the white border */
+}
+
+
+.online_icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #4cd137;
+    border-radius: 50%;
+    bottom: 0.2em;
+    right: 0.4em;
+    border: 1.5px solid white;
+}
+
+.img_cont_msg {
+    height: 40px;
+    width: 40px;
+}
+
+.msg_head {
+	position: relative;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    border-bottom: 0 !important;
+}
+
+.chat {
+    border: 1px solid #3b62d1;
+    border-radius: 5px;
+    padding: 1rem;
+    height: 400px; /* Altura inicial del contenedor del chat */
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    height: 100%; /* Ocupar toda la altura del contenedor flex (chat) */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1; /* Hacer que el card-body ocupe todo el espacio disponible */
+    overflow-y: auto; /* Permitir desplazamiento vertical si el contenido es demasiado largo */
+}
+
+.card-footer {
+    padding: 0.75rem;
+    background-color: #f8f9fa; /* Color de fondo del footer */
+}
+
+.input-group {
+    width: 100%; /* Asegurar que el input-group ocupe todo el ancho del card-footer */
+}
+
+.user_img {
+    border: none;
+    /* Remove the white border */
+}

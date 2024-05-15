@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="chat">
+                <div class="card">
+                    <div class="card-header msg_head">
+                        <div class="d-flex bd-highlight">
+                            <div class="img_cont">
+                                <img src="../../../../../assets/img/logounmsm.png" class="rounded-circle user_img" height="50">
+                            </div>
+                            <div class="user_info">
+                                <span>FISI Bienestar ChatBot</span>
+                                <p>24/7 a tu disposición</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="messageFormeight" class="card-body msg_card_body">
+                        <div *ngFor="let message of chatMessages" [ngClass]="{'my_message': message.sender === 'user', 'bot_message': message.sender === 'bot'}">
+                            <div class="msg_container">
+                                {{ message.content }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <form (ngSubmit)="sendMessage(userInput.value); userInput.value = ''" #messageForm="ngForm" class="input-group">
+                            <input type="text" #userInput name="user_input" placeholder="Escriba su consulta"
+                                autocomplete="off" class="form-control type_msg" required>
+                            <div class="input-group-append">
+                                <button type="submit" class="input-group-text send_btn"><i
+                                        class="fas fa-location-arrow"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
